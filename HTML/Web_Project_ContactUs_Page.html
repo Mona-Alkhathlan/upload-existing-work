@@ -1,0 +1,162 @@
+<!DOCTYBE html>
+<html>
+<head>
+	<meta charset = "utf-8" />
+	<title type="image/logo">Limitless Creativity</title>
+	<link rel="icon" href="https://i.ibb.co/nsDWGtS/Limitless-creative.png" type="image/logo-icon"> 
+	<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<style type="text/css">
+	/* Button used to open the contact form - fixed at the center of the page */
+	.GET_IN_TOUCH_button {
+	  position: static;
+	  background-color: #ccc; 
+	  border: none;
+	  padding: 15px 40px;
+	  text-align: center;
+	  font-size: 17px;
+	  cursor: pointer;
+	  opacity: 0.8;
+	  top: 60%;
+	  right: 40%;
+	  width: 280px;
+	}
+	.GET_IN_TOUCH_button:hover {
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.10);
+	}
+	/* The popup form - hidden by default */
+	.form_popup {
+	  position: fixed;
+	  display: none;
+	  position: fixed;
+	  top: 10%;
+	  margin-left: 25%;
+	  border: 3px solid #f1f1f1;
+	}
+
+	/* Add styles to the form container */
+	.form_container {
+	  width: 100%;
+	  height: 500px;
+	  overflow: scroll;
+	  max-width: 600px;
+	  padding: 10px;
+	  background-color: white;
+	}
+
+	/* Full-width input fields */
+	.form_container input[type=text], textarea{
+	  width: 100%;
+	  padding: 15px;
+	  margin: 5px 0 22px 0;
+	  border: none;
+	  background: #f1f1f1;
+	}
+
+	/* When the inputs get focus, do something */
+	.form_container input[type=text]:focus,.form_container textarea:focus {
+	  background-color: #ddd;
+	  outline: none;
+	}
+
+	/* Set a style for the submit/login button */
+	.form_container .btn {
+	  background-color: #ccc;
+	  color: black;
+	  padding: 16px 20px;
+	  border: none;
+	  cursor: pointer;
+	  width: 100%;
+	  margin-bottom:10px;
+	  opacity: 0.8;
+	}
+
+	/* Add a red background color to the cancel button */
+	.form_container .cancel {
+	  background-color: white;
+	}
+
+	/* Add some hover effects to buttons */
+	.form_container .btn:hover, .GET_IN_TOUCH_button:hover {
+	  opacity: 1;
+	}
+</style>
+</head>
+<body>
+	<header>
+	<img id="logo" src="Limitless creative.png" alt="Limitless Creativity"></img>
+	<!--<img src="BG.jpeg" alt="Limitless Creativity">-->
+	<div class="top">
+	 	<div class="topnav-centered1"><a href="C:\Users\LoL\Desktop\Web_Project\Web_Project_Home_Page.html">Home</a></div>
+	  	<div class="topnav-centered2"><a href="C:\Users\LoL\Desktop\Web_Project\Web_Project_About.html">About</a></div>
+		<div class="topnav-centered3"><a class="active" href="#ContactUs">Contact us</a></div>
+		<form class="form_search" action="/action_page.php">
+		    <input type="text" placeholder="Search.." name="search">
+		  	<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+
+
+
+	<div class="GET_IN_TOUCH_div" style="text-align: center; margin-top: 10%;">
+		<h1 style="font-size: 50px;">Contact Us</h1>
+		<p style="font-size:20px; ">If you have any question please complete the form by<br>clicking next button</p>
+		<button type="submit" class="GET_IN_TOUCH_button" onclick="openForm()">GET IN TOUCH</button>
+	</div>
+	</header>
+
+	<div class="form_popup" id="myForm">
+	  <form action="/action_page.php" class="form_container">
+	    <h1>Contact Us</h1>
+
+        <label for="fname"><b>First Name*</b></label>
+        <input type="text" id="fname" name="firstname" placeholder="Enter First Name" required>
+
+        <label for="lname"><b>Last Name*</b></label>
+        <input type="text" id="lname" name="lastname" placeholder="Enter Last Name" required>
+
+	    <label for="email"><b>Email*</b></label>
+	    <input type="text" placeholder="Enter Email" name="email" required>
+
+	    <label for="subject"><b>Subject</b></label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px;"></textarea>
+
+	    <button type="submit" class="btn"><b>Submit</b></button>
+	    <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+	  </form>
+	</div>
+
+<script>
+	function openForm() {
+	  document.getElementById("myForm").style.display = "block";
+	}
+
+	function closeForm() {
+	  document.getElementById("myForm").style.display = "none";
+	}
+</script>
+
+
+<footer>
+	<h2>OTHOR INFORMATION:</h2>
+	<div class="footer_row">
+	  <div class="footer_column">
+	    <h2>COMPANY</h2>
+	    <p>ABOUT<br>OUR BRAND<br>CONTACT US<br>PRIVACY POLICY</p>
+	  </div>
+	  <div class="footer_column">
+	    <h2>COMMUNITY</h2>
+	    <p>HELP & SUPPORT</p>
+	  </div>
+	  <div class="footer_column">
+	    <h2>FOLLOW</h2>
+	    <p class="FOLLOW_links"><a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i> YOUTUBE</a><br><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i> LINKEDIN</a><br><a href="https://www.facebook.com"><i class="fa fa-facebook-f"></i> FACEBOOK</a><br><a href="https://www.twitter.com"><i class="fa fa-twitter"></i> TWITTER</a></p>
+	  </div>
+	</div>
+	<div style="text-align:center;">
+	<p>Posted by: Limitless Creativity &copy; by Mona and Munera</p>
+	</div>
+</footer>
+</body>
+</html>
